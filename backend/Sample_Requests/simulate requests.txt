@@ -1,0 +1,108 @@
+Sample Request 1 – Patient Simulation
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "scenario": "Evaluate the patient's health progression over the next 30 days assuming strict medication adherence, daily exercise, and a low-sodium diabetic diet.",
+  "simulation_days": 30,
+  "parameters": {
+    "medication_adherence": 100,
+    "exercise_minutes_per_day": 45,
+    "diet": "Low Sodium Diabetic Diet",
+    "smoking": false,
+    "alcohol": "None"
+  }
+}
+Sample Request 2 – Cardiac Patient What-if
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100245",
+  "scenario": "Predict the impact if blood pressure remains above 160/100 for the next 90 days.",
+  "simulation_days": 90,
+  "parameters": {
+    "blood_pressure": "165/102",
+    "medication_adherence": 40,
+    "exercise_minutes_per_day": 0,
+    "weight_gain_kg": 5
+  }
+}
+Sample Request 3 – Clinical Trial Simulation
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100001",
+  "scenario": "Simulate enrollment after adding five new sites across India and Germany.",
+  "simulation_days": 180,
+  "parameters": {
+    "additional_sites": 5,
+    "countries": [
+      "India",
+      "Germany"
+    ],
+    "expected_monthly_enrollment": 80,
+    "dropout_rate": 5.2
+  }
+}
+Sample Request 4 – Trial Risk Simulation
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100004",
+  "scenario": "Evaluate the effect of a 10% increase in participant dropout rate.",
+  "simulation_days": 120,
+  "parameters": {
+    "dropout_rate": 10,
+    "screen_failure_rate": 18,
+    "site_activation_delay_days": 15
+  }
+}
+Sample Request 5 – Hospital Capacity Simulation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "scenario": "Simulate hospital operations during a seasonal influenza outbreak.",
+  "simulation_days": 60,
+  "parameters": {
+    "expected_patient_increase": 35,
+    "icu_admission_rate": 12,
+    "available_ventilators": 90,
+    "additional_staff": 40
+  }
+}
+Sample Request 6 – Emergency Surge Simulation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100004",
+  "scenario": "Predict resource utilization during a mass casualty incident affecting 250 patients.",
+  "simulation_days": 7,
+  "parameters": {
+    "emergency_patients": 250,
+    "critical_patients": 60,
+    "ambulances": 45,
+    "available_doctors": 150,
+    "available_nurses": 420
+  }
+}
+Sample Request 7 – Pandemic Simulation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100002",
+  "scenario": "Model hospital capacity during a pandemic with a 50% increase in admissions.",
+  "simulation_days": 120,
+  "parameters": {
+    "patient_growth_percent": 50,
+    "icu_growth_percent": 30,
+    "staff_absenteeism_percent": 12,
+    "ventilator_utilization_percent": 92
+  }
+}
+Sample Request 8 – Resource Optimization Simulation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100003",
+  "scenario": "Optimize staffing and ICU bed allocation while maintaining occupancy below 85%.",
+  "simulation_days": 45,
+  "parameters": {
+    "target_occupancy": 85,
+    "additional_nurses": 30,
+    "additional_doctors": 12,
+    "new_icu_beds": 15
+  }
+}

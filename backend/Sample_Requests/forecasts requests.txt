@@ -1,0 +1,161 @@
+Sample Request 1 – Patient Blood Pressure Forecast
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "forecast_days": 30,
+  "target_variable": "blood_pressure",
+  "input_features": {
+    "age": 58,
+    "gender": "Male",
+    "bmi": 27.7,
+    "current_blood_pressure": "145/92",
+    "heart_rate": 84,
+    "diabetes": true,
+    "hypertension": true,
+    "medication_adherence": 95,
+    "exercise_minutes_per_day": 40,
+    "smoking_status": "Former Smoker"
+  }
+}
+Sample Request 2 – Patient Readmission Forecast
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100245",
+  "forecast_days": 90,
+  "target_variable": "hospital_readmission",
+  "input_features": {
+    "age": 72,
+    "diagnosis": "Heart Failure",
+    "length_of_stay": 8,
+    "previous_admissions": 3,
+    "medication_adherence": 80,
+    "charlson_score": 5,
+    "discharge_status": "Home"
+  }
+}
+Sample Request 3 – Patient HbA1c Forecast
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100356",
+  "forecast_days": 180,
+  "target_variable": "HbA1c",
+  "input_features": {
+    "current_hba1c": 8.2,
+    "age": 61,
+    "weight_kg": 88,
+    "bmi": 31.2,
+    "exercise_minutes_per_day": 20,
+    "diet_compliance": 75,
+    "medication_adherence": 92
+  }
+}
+Sample Request 4 – Clinical Trial Enrollment Forecast
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100001",
+  "forecast_days": 180,
+  "target_variable": "enrollment",
+  "input_features": {
+    "phase": "Phase III",
+    "current_enrollment": 845,
+    "target_enrollment": 1200,
+    "active_sites": 32,
+    "monthly_enrollment_rate": 58,
+    "dropout_rate": 6.8,
+    "countries": [
+      "India",
+      "USA",
+      "Germany"
+    ]
+  }
+}
+Sample Request 5 – Clinical Trial Completion Forecast
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100004",
+  "forecast_days": 365,
+  "target_variable": "trial_completion_date",
+  "input_features": {
+    "phase": "Phase II",
+    "remaining_subjects": 120,
+    "current_sites": 28,
+    "protocol_deviations": 12,
+    "screen_failure_rate": 15,
+    "dropout_rate": 5.4
+  }
+}
+Sample Request 6 – Hospital Bed Occupancy Forecast
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "forecast_days": 60,
+  "target_variable": "bed_occupancy",
+  "input_features": {
+    "total_beds": 750,
+    "occupied_beds": 642,
+    "icu_beds": 120,
+    "current_occupancy_rate": 85.6,
+    "average_daily_admissions": 82,
+    "average_daily_discharges": 75,
+    "season": "Monsoon"
+  }
+}
+Sample Request 7 – ICU Demand Forecast
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100002",
+  "forecast_days": 30,
+  "target_variable": "icu_demand",
+  "input_features": {
+    "icu_beds": 320,
+    "occupied_icu_beds": 284,
+    "critical_patient_rate": 18,
+    "daily_emergency_cases": 140,
+    "flu_season": true,
+    "available_ventilators": 285
+  }
+}
+Sample Request 8 – Hospital Revenue Forecast
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100003",
+  "forecast_days": 365,
+  "target_variable": "hospital_revenue",
+  "input_features": {
+    "monthly_revenue": 12500000,
+    "average_patient_volume": 3800,
+    "average_billing_per_patient": 42000,
+    "insurance_claim_rate": 82,
+    "operating_cost": 8600000,
+    "occupancy_rate": 88
+  }
+}
+Sample Request 9 – Ventilator Utilization Forecast
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100004",
+  "forecast_days": 45,
+  "target_variable": "ventilator_utilization",
+  "input_features": {
+    "available_ventilators": 90,
+    "current_utilization": 72,
+    "critical_patient_growth": 12,
+    "icu_growth_rate": 9,
+    "pandemic_alert": false
+  }
+}
+Sample Request 10 – Staff Requirement Forecast
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100005",
+  "forecast_days": 90,
+  "target_variable": "staff_requirement",
+  "input_features": {
+    "current_doctors": 165,
+    "current_nurses": 390,
+    "average_daily_patients": 640,
+    "expected_patient_growth": 18,
+    "new_departments": 2,
+    "bed_expansion": 60
+  }
+}

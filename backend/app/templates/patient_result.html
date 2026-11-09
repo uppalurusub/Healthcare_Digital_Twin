@@ -1,0 +1,49 @@
+<div class="success">
+
+<h2>Patient Twin Created</h2>
+
+<table>
+
+<tr>
+
+<td><b>Twin ID</b></td>
+
+<td>{{ result["digital_twin"]["twin_id"] }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Status</b></td>
+
+<td>{{ "Success" if result.success else "Failed" }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Risk Score</b></td>
+
+<td>{{ result.risk_score }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Prediction</b></td>
+
+<td>{{ result.digital_twin.prediction.risk_category }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Recommendation</b></td>
+
+<td>{{ result.digital_twin.prediction.recommendations }}</td>
+
+</tr>
+
+</table>
+
+</div>

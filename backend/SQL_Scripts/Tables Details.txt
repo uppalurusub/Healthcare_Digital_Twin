@@ -1,0 +1,388 @@
+Database Architecture
+=====================
+
+                    PATIENT
+                        │
+        ┌───────────────┼────────────────┐
+        ▼               ▼                ▼
+PATIENT_VITALS   PATIENT_DIAGNOSIS   PATIENT_MEDICATION
+        │               │                │
+        └───────────────┼────────────────┘
+                        ▼
+               PATIENT_HISTORY
+                        │
+                        ▼
+               DIGITAL_TWIN_PATIENT
+                        │
+                        ▼
+              SIMULATION_RESULT
+                        │
+                        ▼
+               PREDICTION_RESULT
+			   
+			   
+			   
+Master Tables
+1. PATIENT
+
+Stores demographic information.
+
+CREATE TABLE patient (
+    patient_id VARCHAR(50) PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    gender VARCHAR(20),
+    age INT,
+    date_of_birth DATE,
+    phone VARCHAR(20),
+    email VARCHAR(100),
+    created_at DATETIME,
+    updated_at DATETIME
+);
+2. PATIENT_VITALS
+CREATE TABLE patient_vitals (
+
+    vital_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    height_cm DECIMAL(5,2),
+
+    weight_kg DECIMAL(5,2),
+
+    bmi DECIMAL(5,2),
+
+    blood_pressure VARCHAR(20),
+
+    heart_rate INT,
+
+    respiratory_rate INT,
+
+    spo2 DECIMAL(5,2),
+
+    temperature DECIMAL(5,2),
+
+    recorded_at DATETIME,
+
+    FOREIGN KEY(patient_id)
+        REFERENCES patient(patient_id)
+);
+3. PATIENT_DIAGNOSIS
+CREATE TABLE patient_diagnosis (
+
+    diagnosis_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    diagnosis_name VARCHAR(200),
+
+    diagnosis_code VARCHAR(30),
+
+    diagnosis_date DATE,
+
+    status VARCHAR(50)
+);
+4. PATIENT_MEDICATION
+CREATE TABLE patient_medication (
+
+    medication_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    medication_name VARCHAR(200),
+
+    dosage VARCHAR(100),
+
+    frequency VARCHAR(100),
+
+    start_date DATE,
+
+    end_date DATE
+);
+5. PATIENT_ALLERGY
+CREATE TABLE patient_allergy (
+
+    allergy_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    allergy_name VARCHAR(200),
+
+    severity VARCHAR(30)
+);
+6. LAB_RESULT
+CREATE TABLE laboratory_result (
+
+    lab_result_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    test_name VARCHAR(200),
+
+    result_value VARCHAR(100),
+
+    normal_range VARCHAR(100),
+
+    result_date DATETIME
+);
+Digital Twin Tables
+7. DIGITAL_TWIN_PATIENT
+
+Stores every patient twin version.
+
+CREATE TABLE digital_twin_patient (
+
+    twin_id VARCHAR(100) PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    twin_version INT,
+
+    twin_json JSON,
+
+    health_score DECIMAL(5,2),
+
+    risk_score DECIMAL(5,2),
+
+    confidence DECIMAL(5,2),
+
+    created_at DATETIME
+);
+8. DIGITAL_TWIN_TRIAL
+CREATE TABLE digital_twin_trial (
+
+    twin_id VARCHAR(100) PRIMARY KEY,
+
+    trial_id VARCHAR(50),
+
+    twin_json JSON,
+
+    created_at DATETIME
+);
+9. DIGITAL_TWIN_HOSPITAL
+CREATE TABLE digital_twin_hospital (
+
+    twin_id VARCHAR(100) PRIMARY KEY,
+
+    hospital_id VARCHAR(50),
+
+    twin_json JSON,
+
+    created_at DATETIME
+);
+Clinical Trial Tables
+10. CLINICAL_TRIAL
+CREATE TABLE clinical_trial (
+
+    trial_id VARCHAR(50) PRIMARY KEY,
+
+    protocol_number VARCHAR(100),
+
+    phase VARCHAR(20),
+
+    sponsor VARCHAR(200),
+
+    target_enrollment INT,
+
+    current_enrollment INT,
+
+    status VARCHAR(30)
+);
+11. TRIAL_SITE
+CREATE TABLE trial_site (
+
+    site_id VARCHAR(50) PRIMARY KEY,
+
+    trial_id VARCHAR(50),
+
+    site_name VARCHAR(200),
+
+    investigator VARCHAR(200),
+
+    city VARCHAR(100),
+
+    country VARCHAR(100)
+);
+12. TRIAL_ENROLLMENT
+CREATE TABLE trial_enrollment (
+
+    enrollment_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    trial_id VARCHAR(50),
+
+    patient_id VARCHAR(50),
+
+    enrollment_date DATE,
+
+    status VARCHAR(30)
+);
+Hospital Tables
+13. HOSPITAL
+CREATE TABLE hospital (
+
+    hospital_id VARCHAR(50) PRIMARY KEY,
+
+    hospital_name VARCHAR(200),
+
+    city VARCHAR(100),
+
+    state VARCHAR(100),
+
+    country VARCHAR(100)
+);
+14. BED_OCCUPANCY
+CREATE TABLE bed_occupancy (
+
+    occupancy_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    hospital_id VARCHAR(50),
+
+    total_beds INT,
+
+    occupied_beds INT,
+
+    icu_beds INT,
+
+    occupied_icu INT,
+
+    occupancy_date DATE
+);
+15. STAFF
+CREATE TABLE hospital_staff (
+
+    staff_id VARCHAR(50) PRIMARY KEY,
+
+    hospital_id VARCHAR(50),
+
+    department VARCHAR(100),
+
+    role VARCHAR(100),
+
+    availability VARCHAR(30)
+);
+AI Tables
+16. SIMULATION_RESULT
+CREATE TABLE simulation_result (
+
+    simulation_id VARCHAR(100) PRIMARY KEY,
+
+    entity_type VARCHAR(50),
+
+    entity_id VARCHAR(50),
+
+    scenario VARCHAR(500),
+
+    simulation_json JSON,
+
+    created_at DATETIME
+);
+17. PREDICTION_RESULT
+CREATE TABLE prediction_result (
+
+    prediction_id VARCHAR(100) PRIMARY KEY,
+
+    entity_type VARCHAR(50),
+
+    entity_id VARCHAR(50),
+
+    prediction_json JSON,
+
+    confidence DECIMAL(5,2),
+
+    created_at DATETIME
+);
+18. FORECAST_RESULT
+CREATE TABLE forecast_result (
+
+    forecast_id VARCHAR(100) PRIMARY KEY,
+
+    entity_type VARCHAR(50),
+
+    entity_id VARCHAR(50),
+
+    forecast_days INT,
+
+    forecast_json JSON,
+
+    created_at DATETIME
+);
+19. EXPLAINABILITY
+CREATE TABLE explainability (
+
+    explanation_id VARCHAR(100) PRIMARY KEY,
+
+    prediction_id VARCHAR(100),
+
+    explanation JSON,
+
+    created_at DATETIME
+);
+LangChain Tables
+20. VECTOR_DOCUMENT
+CREATE TABLE vector_document (
+
+    document_id VARCHAR(100) PRIMARY KEY,
+
+    patient_id VARCHAR(50),
+
+    source VARCHAR(200),
+
+    metadata JSON,
+
+    created_at DATETIME
+);
+21. AGENT_EXECUTION_LOG
+CREATE TABLE agent_execution_log (
+
+    execution_id VARCHAR(100) PRIMARY KEY,
+
+    agent_name VARCHAR(100),
+
+    request_json JSON,
+
+    response_json JSON,
+
+    execution_time DECIMAL(10,3),
+
+    status VARCHAR(30),
+
+    created_at DATETIME
+);
+Audit Tables
+22. API_REQUEST_LOG
+CREATE TABLE api_request_log (
+
+    request_id VARCHAR(100) PRIMARY KEY,
+
+    endpoint VARCHAR(200),
+
+    request_json JSON,
+
+    response_json JSON,
+
+    execution_time DECIMAL(10,3),
+
+    created_at DATETIME
+);
+Recommended Enterprise Schema
+Module	Tables
+Patient	6
+Digital Twin	3
+Clinical Trial	3
+Hospital	3
+AI	4
+LangChain	2
+Audit	1
+Total	22 Tables
+Enterprise Recommendations
+
+For a real-world Healthcare Digital Twin Platform, I would extend this schema with:
+
+FHIR-aligned tables for Patient, Encounter, Observation, Condition, MedicationRequest, Procedure, AllergyIntolerance, and CarePlan resources to simplify interoperability with EHR systems.
+Master reference tables (diagnosis codes, medication catalog, lab test catalog, departments, devices) instead of storing free-text values.
+Versioning for digital twins (version_number, effective_from, effective_to) so each simulation and prediction is traceable over time.
+User, Role, and Organization tables with RBAC for multi-tenant deployments.
+Model registry metadata (model version, prompt version, embedding version) linked to each prediction for reproducibility.
+Event and message tables to capture simulation events and asynchronous processing, enabling scalable workflows with queues or event-driven architectures.
+
+This design scales well for FastAPI + LangChain + ChromaDB + MySQL + Agentic AI and supports future expansion into production-grade healthcare systems.

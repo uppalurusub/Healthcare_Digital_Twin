@@ -1,0 +1,134 @@
+Sample Request 1 – Patient Treatment Optimization
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "objective": "Optimize hypertension and diabetes treatment while minimizing medication side effects.",
+  "constraints": {
+    "maximum_medications": 4,
+    "target_systolic_bp": 130,
+    "target_hba1c": 7.0,
+    "allergies": [
+      "Penicillin"
+    ],
+    "preferred_medications": [
+      "Metformin",
+      "Amlodipine"
+    ]
+  }
+}
+Sample Request 2 – Patient Care Plan Optimization
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100245",
+  "objective": "Optimize rehabilitation plan to reduce hospital readmission risk.",
+  "constraints": {
+    "daily_exercise_minutes": 45,
+    "weekly_followups": 1,
+    "diet": "Low Sodium",
+    "maximum_monthly_cost": 15000
+  }
+}
+Sample Request 3 – Clinical Trial Enrollment Optimization
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100001",
+  "objective": "Maximize patient enrollment while minimizing recruitment cost.",
+  "constraints": {
+    "budget": 5000000,
+    "maximum_sites": 40,
+    "minimum_enrollment": 1200,
+    "study_duration_months": 18
+  }
+}
+Sample Request 4 – Clinical Trial Site Optimization
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100002",
+  "objective": "Optimize site selection for faster recruitment.",
+  "constraints": {
+    "countries": [
+      "India",
+      "USA",
+      "Germany"
+    ],
+    "maximum_sites": 25,
+    "minimum_patient_recruitment_per_site": 40,
+    "maximum_budget": 3500000
+  }
+}
+Sample Request 5 – Hospital Bed Allocation Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "objective": "Optimize hospital bed allocation to maintain occupancy below 85%.",
+  "constraints": {
+    "maximum_occupancy": 85,
+    "icu_reserved_beds": 20,
+    "emergency_reserved_beds": 40,
+    "minimum_general_beds": 300
+  }
+}
+Sample Request 6 – Hospital Staff Scheduling Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100002",
+  "objective": "Optimize doctor and nurse scheduling while minimizing overtime.",
+  "constraints": {
+    "maximum_weekly_hours": 48,
+    "minimum_doctors_per_shift": 45,
+    "minimum_nurses_per_shift": 120,
+    "maximum_overtime_hours": 8
+  }
+}
+Sample Request 7 – ICU Resource Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100003",
+  "objective": "Optimize ICU utilization during peak patient demand.",
+  "constraints": {
+    "icu_beds": 180,
+    "ventilators": 145,
+    "minimum_available_icu_beds": 15,
+    "maximum_utilization": 90
+  }
+}
+Sample Request 8 – Hospital Financial Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100004",
+  "objective": "Maximize hospital profitability while maintaining quality of care.",
+  "constraints": {
+    "annual_budget": 500000000,
+    "maximum_operational_cost": 420000000,
+    "minimum_patient_satisfaction": 95,
+    "minimum_staff_ratio": 1.8
+  }
+}
+Sample Request 9 – Emergency Resource Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100005",
+  "objective": "Optimize emergency department resources during disaster response.",
+  "constraints": {
+    "ambulances": 25,
+    "emergency_doctors": 60,
+    "emergency_nurses": 140,
+    "maximum_wait_time_minutes": 20
+  }
+}
+Sample Request 10 – Hospital Supply Chain Optimization
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "objective": "Optimize inventory levels for critical medical supplies while reducing storage costs.",
+  "constraints": {
+    "minimum_inventory_days": 30,
+    "maximum_inventory_budget": 25000000,
+    "critical_supplies": [
+      "Ventilators",
+      "PPE Kits",
+      "Insulin",
+      "Blood Units"
+    ]
+  }
+}

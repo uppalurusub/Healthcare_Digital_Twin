@@ -1,0 +1,133 @@
+Sample Request 1 – Compare Two Patient Digital Twins
+{
+  "twin_type": "patient",
+  "entity_ids": [
+    "PAT-100001",
+    "PAT-100245"
+  ]
+}
+Sample Request 2 – Compare Three Diabetes Patients
+{
+  "twin_type": "patient",
+  "entity_ids": [
+    "PAT-100001",
+    "PAT-100356",
+    "PAT-100487"
+  ]
+}
+Sample Request 3 – Compare Heart Failure Patients
+{
+  "twin_type": "patient",
+  "entity_ids": [
+    "PAT-200101",
+    "PAT-200102",
+    "PAT-200103",
+    "PAT-200104"
+  ]
+}
+Sample Request 4 – Compare Two Clinical Trials
+{
+  "twin_type": "trial",
+  "entity_ids": [
+    "TRIAL-100001",
+    "TRIAL-100002"
+  ]
+}
+Sample Request 5 – Compare Multiple Oncology Trials
+{
+  "twin_type": "trial",
+  "entity_ids": [
+    "TRIAL-200001",
+    "TRIAL-200002",
+    "TRIAL-200003",
+    "TRIAL-200004"
+  ]
+}
+Sample Request 6 – Compare Trial Sites
+{
+  "twin_type": "trial",
+  "entity_ids": [
+    "TRIAL-300001",
+    "TRIAL-300005",
+    "TRIAL-300008"
+  ]
+}
+Sample Request 7 – Compare Two Hospitals
+{
+  "twin_type": "hospital",
+  "entity_ids": [
+    "HOSP-100001",
+    "HOSP-100002"
+  ]
+}
+Sample Request 8 – Compare Multi-Specialty Hospitals
+{
+  "twin_type": "hospital",
+  "entity_ids": [
+    "HOSP-100001",
+    "HOSP-100003",
+    "HOSP-100005"
+  ]
+}
+Sample Request 9 – Compare Hospital Networks
+{
+  "twin_type": "hospital",
+  "entity_ids": [
+    "HOSP-200001",
+    "HOSP-200002",
+    "HOSP-200003",
+    "HOSP-200004",
+    "HOSP-200005"
+  ]
+}
+Sample Request 10 – Compare Regional Healthcare Systems
+{
+  "twin_type": "hospital",
+  "entity_ids": [
+    "HOSP-HYD-001",
+    "HOSP-BLR-001",
+    "HOSP-DEL-001",
+    "HOSP-MUM-001"
+  ]
+}
+Typical Comparison Output
+
+A comparison request such as:
+
+{
+  "twin_type": "patient",
+  "entity_ids": [
+    "PAT-100001",
+    "PAT-100245"
+  ]
+}
+
+could produce a response similar to:
+
+{
+  "comparison_type": "patient",
+  "entities_compared": 2,
+  "comparison": [
+    {
+      "patient_id": "PAT-100001",
+      "health_score": 89,
+      "risk_score": 18,
+      "predicted_readmission": "Low",
+      "mortality_risk": "Low"
+    },
+    {
+      "patient_id": "PAT-100245",
+      "health_score": 72,
+      "risk_score": 41,
+      "predicted_readmission": "Medium",
+      "mortality_risk": "Medium"
+    }
+  ],
+  "summary": {
+    "best_health_score": "PAT-100001",
+    "highest_risk": "PAT-100245",
+    "recommended_follow_up": [
+      "PAT-100245"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "message": "Patient Digital Twin created successfully.",
+  "metadata": null,
+  "patient_id": "PAT-100115",
+  "digital_twin": {
+    "twin_id": "TWIN-9F6CB3079A6840D4B28D1071794CFF6A",
+    "patient": {
+      "patient_id": "PAT-100115",
+      "age": 58,
+      "gender": "Male",
+      "height_cm": 172.5,
+      "weight_kg": 82.3,
+      "bmi": 27.7,
+      "blood_pressure": "145/92",
+      "heart_rate": 84,
+      "respiratory_rate": 18,
+      "spo2": 97,
+      "temperature": 36.8,
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes Mellitus",
+        "Hyperlipidemia"
+      ],
+      "medications": [
+        "Metformin 500 mg twice daily",
+        "Amlodipine 5 mg once daily",
+        "Atorvastatin 20 mg once daily",
+        "Aspirin 81 mg once daily"
+      ],
+      "allergies": [
+        "Penicillin",
+        "Peanuts"
+      ],
+      "laboratory_results": {
+        "HbA1c": 7.4,
+        "Fasting Blood Glucose": 148,
+        "Total Cholesterol": 210,
+        "LDL": 132,
+        "HDL": 42,
+        "Triglycerides": 185,
+        "Creatinine": 1,
+        "eGFR": 88,
+        "Hemoglobin": 14.1,
+        "WBC": 7200,
+        "Platelets": 250000
+      },
+      "smoking_status": "Former Smoker",
+      "alcohol_use": "Occasional",
+      "medical_history": {
+        "chronic_conditions": [
+          "Hypertension",
+          "Type 2 Diabetes",
+          "Hyperlipidemia"
+        ],
+        "surgeries": [
+          "Appendectomy (2012)"
+        ],
+        "family_history": {
+          "father": [
+            "Coronary Artery Disease"
+          ],
+          "mother": [
+            "Type 2 Diabetes"
+          ]
+        },
+        "previous_hospitalizations": [
+          {
+            "admission_date": "2025-03-10",
+            "discharge_date": "2025-03-15",
+            "reason": "Uncontrolled Hypertension"
+          }
+        ],
+        "vaccinations": [
+          "COVID-19",
+          "Influenza",
+          "Hepatitis B"
+        ]
+      },
+      "metadata": {
+        "request_id": "REQ-20260704-0001",
+        "user_id": "doctor_001",
+        "organization": "Apollo Hospitals",
+        "timestamp": "2026-07-04T14:30:00Z"
+      }
+    },
+    "analysis": "**Patient Digital Twin**\n\n### Clinical Summary\n\nThe patient, PAT-100115, is a 58-year-old male with a history of hypertension, type 2 diabetes mellitus, and hyperlipidemia. He is currently on medications for these conditions, including metformin, amlodipine, atorvastatin, and aspirin. The patient has allergies to penicillin and peanuts.\n\n### Overall Health\n\nThe patient's overall health is concerning due to the presence of multiple chronic conditions. His blood pressure is elevated at 145/92, which indicates uncontrolled hypertension. The patient's heart rate is within normal limits, but his temperature and SpO2 levels are also within normal ranges.\n\n### Key Findings\n\n* **Uncontrolled Hypertension**: The patient's blood pressure is above the recommended target range, which increases the risk of cardiovascular events.\n* **Type 2 Diabetes Mellitus**: The patient is taking metformin, but there is no information on his current blood glucose levels or hemoglobin A1c (HbA1c) values.\n* **Hyperlipidemia**: The patient is taking atorvastatin, but there is no information on his current lipid profiles.\n* **Allergies**: The patient has known allergies to penicillin and peanuts, which is crucial for medication management and potential surgical procedures.\n\n### Recommendations\n\nBased on the patient's profile, the following recommendations are made:\n\n1. **Tighten Blood Pressure Control**: The patient's blood pressure should be monitored closely, and his current medication regimen should be adjusted to achieve a blood pressure target of <130/80 mmHg.\n2. **Monitor Blood Glucose Levels**: The patient's blood glucose levels and HbA1c values should be checked regularly to ensure adequate control of his diabetes.\n3. **Lipid Profile Monitoring**: The patient's lipid profiles should be monitored regularly to assess the effectiveness of atorvastatin therapy.\n4. **Medication Adherence**: The patient should be educated on the importance of adhering to his medication regimen to control his chronic conditions.\n5. **Allergy Awareness**: The patient's allergies should be clearly documented in his medical records, and he should be educated on the potential risks of exposure to penicillin and peanuts.\n\n### JSON Output\n\n```json\n{\n    \"patient_id\": \"PAT-100115\",\n    \"clinical_summary\": {\n        \"age\": 58,\n        \"gender\": \"Male\",\n        \"diagnoses\": [\"Hypertension\", \"Type 2 Diabetes Mellitus\", \"Hyperlipidemia\"],\n        \"medications\": [\"Metformin 500 mg twice daily\", \"Amlodipine 5 mg once daily\", \"Atorvastatin 20 mg once daily\", \"Aspirin 81 mg once daily\"],\n        \"allergies\": [\"Penicillin\", \"Peanuts\"]\n    },\n    \"overall_health\": {\n        \"blood_pressure\": \"Elevated\",\n        \"heart_rate\": \"Normal\",\n        \"temperature\": \"Normal\",\n        \"SpO2\": \"Normal\"\n    },\n    \"key_findings\": [\n        \"Uncontrolled Hypertension\",\n        \"Type 2 Diabetes Mellitus\",\n        \"Hyperlipidemia\",\n        \"Allergies\"\n    ],\n    \"recommendations\": [\n        {\n            \"id\": 1,\n            \"description\": \"Tighten Blood Pressure Control\",\n            \"rationale\": \"Uncontrolled hypertension increases the risk of cardiovascular events\"\n        },\n        {\n            \"id\": 2,\n            \"description\": \"Monitor Blood Glucose Levels\",\n            \"rationale\": \"Adequate control of diabetes is crucial for preventing complications\"\n        },\n        {\n            \"id\": 3,\n            \"description\": \"Lipid Profile Monitoring\",\n            \"rationale\": \"Regular monitoring of lipid profiles is necessary to assess the effectiveness of atorvastatin therapy\"\n        },\n        {\n            \"id\": 4,\n            \"description\": \"Medication Adherence\",\n            \"rationale\": \"Adherence to medication regimen is crucial for controlling chronic conditions\"\n        },\n        {\n            \"id\": 5,\n            \"description\": \"Allergy Awareness\",\n            \"rationale\": \"Clear documentation and patient education on allergies are essential for preventing adverse reactions\"\n        }\n    ]\n}\n```",
+    "risk_analysis": "### Assessment of Disease Risks\n\nBased on the provided patient information, I will assess the disease risks and provide an overall health score.\n\n#### 1. Cardiovascular Risk\n\n* The patient has a history of Hypertension, Hyperlipidemia, and is a former smoker, which increases the cardiovascular risk.\n* The patient's blood pressure is elevated (145/92 mmHg), and the LDL cholesterol level is high (132 mg/dL).\n* The patient is taking Amlodipine (a calcium channel blocker) and Atorvastatin (a statin) to manage hypertension and hyperlipidemia, respectively.\n* The patient's age (58), gender (Male), and family history of Coronary Artery Disease (father) also contribute to the cardiovascular risk.\n* Using the Framingham Risk Score, the patient's 10-year cardiovascular risk is estimated to be around 15-20%.\n\n#### 2. Diabetes Risk\n\n* The patient has Type 2 Diabetes Mellitus with an HbA1c level of 7.4%, indicating fair glycemic control.\n* The patient's fasting blood glucose level is elevated (148 mg/dL), and the patient is taking Metformin to manage diabetes.\n* The patient's family history of Type 2 Diabetes (mother) also increases the diabetes risk.\n* The patient's current diabetes management and lifestyle modifications will help mitigate the risk of diabetes-related complications.\n\n#### 3. Stroke Risk\n\n* The patient's history of Hypertension and Hyperlipidemia increases the stroke risk.\n* The patient's elevated blood pressure (145/92 mmHg) and high LDL cholesterol level (132 mg/dL) contribute to the stroke risk.\n* The patient's age (58) and gender (Male) also contribute to the stroke risk.\n* Using the Framingham Stroke Risk Profile, the patient's 10-year stroke risk is estimated to be around 10-15%.\n\n#### 4. Kidney Disease Risk\n\n* The patient's eGFR is 88 mL/min/1.73m^2, indicating relatively preserved kidney function.\n* The patient's creatinine level is normal (1.0 mg/dL), and the patient is not taking any nephrotoxic medications.\n* The patient's diabetes and hypertension management will help mitigate the risk of kidney disease progression.\n* The patient's kidney disease risk is currently estimated to be low-moderate (around 5-10%).\n\n#### 5. Overall Health Score\n\n* Based on the assessment of disease risks, the patient's overall health score is estimated to be around 60-70 out of 100.\n* The patient's chronic conditions (Hypertension, Type 2 Diabetes, Hyperlipidemia) and lifestyle factors (former smoker, occasional alcohol use) contribute to the health score.\n* The patient's current medications and lifestyle modifications will help improve the health score over time.\n\n### JSON Output\n\n```json\n{\n  \"patient_id\": \"PAT-100115\",\n  \"cardiovascular_risk\": {\n    \"10_year_risk\": \"15-20%\",\n    \"factors\": [\n      \"Hypertension\",\n      \"Hyperlipidemia\",\n      \"Former Smoker\",\n      \"Family History of Coronary Artery Disease\"\n    ]\n  },\n  \"diabetes_risk\": {\n    \"hba1c\": 7.4,\n    \"fasting_blood_glucose\": 148,\n    \"factors\": [\n      \"Type 2 Diabetes Mellitus\",\n      \"Family History of Type 2 Diabetes\"\n    ]\n  },\n  \"stroke_risk\": {\n    \"10_year_risk\": \"10-15%\",\n    \"factors\": [\n      \"Hypertension\",\n      \"Hyperlipidemia\",\n      \"Age\",\n      \"Gender\"\n    ]\n  },\n  \"kidney_disease_risk\": {\n    \"egfr\": 88,\n    \"creatinine\": 1.0,\n    \"factors\": [\n      \"Diabetes\",\n      \"Hypertension\"\n    ]\n  },\n  \"overall_health_score\": {\n    \"score\": \"60-70\",\n    \"factors\": [\n      \"Chronic Conditions\",\n      \"Lifestyle Factors\",\n      \"Medications\"\n    ]\n  }\n}\n```\n\nNote: The estimated risks and health score are based on the provided patient information and may not reflect the patient's actual risk profile. A comprehensive risk assessment should be performed by a qualified healthcare professional.",
+    "forecast": "### Patient Health Forecast for the Next 30 Days\n\n#### Introduction\nBased on the provided patient information, we will analyze the patient's health status and predict disease progression, readmission risk, mortality risk, and medication effectiveness for the next 30 days.\n\n#### Disease Progression\nThe patient has a history of Hypertension, Type 2 Diabetes Mellitus, and Hyperlipidemia. Considering the laboratory results, the patient's HbA1c level is 7.4, indicating moderately controlled diabetes. The blood pressure is elevated at 145/92, which is a concern for cardiovascular risk. The lipid profile shows high Total Cholesterol and LDL levels, which increases the risk of cardiovascular events.\n\n**Disease Progression Prediction:**\n\n* Hypertension: Likely to remain uncontrolled if lifestyle modifications and adherence to medication are not optimized.\n* Type 2 Diabetes Mellitus: May progress if glycemic control is not improved, with a potential increase in HbA1c levels.\n* Hyperlipidemia: May progress, increasing the risk of cardiovascular events if lipid-lowering therapy is not optimized.\n\n#### Readmission Risk\nThe patient has a history of previous hospitalization for uncontrolled hypertension. Considering the current blood pressure and laboratory results, there is a moderate risk of readmission for cardiovascular-related events.\n\n**Readmission Risk Prediction:**\n\n* 30-day readmission risk: 15% ± 5% (moderate risk)\n\n#### Mortality Risk\nThe patient's age, comorbidities, and laboratory results indicate a relatively high risk of mortality due to cardiovascular events.\n\n**Mortality Risk Prediction:**\n\n* 30-day mortality risk: 2% ± 1% (low to moderate risk)\n\n#### Medication Effectiveness\nThe patient is currently taking Metformin, Amlodipine, Atorvastatin, and Aspirin. These medications are expected to be effective in managing the patient's conditions, but adherence and optimal dosing are crucial.\n\n**Medication Effectiveness Prediction:**\n\n* Metformin: Likely to be effective in controlling blood glucose levels if taken as prescribed.\n* Amlodipine: Expected to be effective in controlling blood pressure if taken as prescribed.\n* Atorvastatin: Likely to be effective in lowering lipid levels if taken as prescribed.\n* Aspirin: Expected to be effective in preventing cardiovascular events if taken as prescribed.\n\n### Recommendations\n\n1. **Optimize medication adherence**: Ensure the patient takes medications as prescribed to achieve better control of hypertension, diabetes, and hyperlipidemia.\n2. **Lifestyle modifications**: Encourage the patient to adopt a healthy diet, increase physical activity, and manage stress to improve overall health.\n3. **Close monitoring**: Schedule regular follow-up appointments to monitor blood pressure, blood glucose, and lipid levels.\n4. **Consider additional therapies**: If the patient's condition does not improve with current medications, consider adding or adjusting therapies, such as ACE inhibitors or ARBs for hypertension, and/or other lipid-lowering agents.\n\n### JSON Output\n\n```json\n{\n  \"patient_id\": \"PAT-100115\",\n  \"forecast\": {\n    \"disease_progression\": {\n      \"hypertension\": \"likely to remain uncontrolled\",\n      \"type_2_diabetes_mellitus\": \"may progress\",\n      \"hyperlipidemia\": \"may progress\"\n    },\n    \"readmission_risk\": {\n      \"30_day_risk\": \"15% ± 5%\"\n    },\n    \"mortality_risk\": {\n      \"30_day_risk\": \"2% ± 1%\"\n    },\n    \"medication_effectiveness\": {\n      \"metformin\": \"likely to be effective\",\n      \"amlodipine\": \"expected to be effective\",\n      \"atorvastatin\": \"likely to be effective\",\n      \"aspirin\": \"expected to be effective\"\n    }\n  },\n  \"recommendations\": [\n    \"Optimize medication adherence\",\n    \"Lifestyle modifications\",\n    \"Close monitoring\",\n    \"Consider additional therapies\"\n  ]\n}\n```\n\nNote: The predictions and recommendations are based on the provided patient information and may not be applicable in all situations. Clinical judgment and individual patient factors should be considered when making treatment decisions.",
+    "simulation": {
+      "simulation": "patient",
+      "hospitalization_probability": 0.5,
+      "icu_probability": 0.17,
+      "mortality_probability": 0.06,
+      "health_score": 50,
+      "timestamp": "2026-07-15T05:43:21.304336"
+    },
+    "prediction": {
+      "entity": "patient",
+      "health_score": 70,
+      "risk_score": 30,
+      "risk_category": "Low",
+      "confidence": 0.85,
+      "recommendations": [
+        "Continue current treatment",
+        "Annual health assessment"
+      ],
+      "prediction_time": "2026-07-15T05:43:21.304336"
+    }
+  },
+  "health_score": 70,
+  "risk_score": 30,
+  "recommendations": [
+    "Continue current treatment",
+    "Annual health assessment"
+  ]
+}

@@ -1,0 +1,141 @@
+Sample Request 1 – Multi-Specialty Hospital
+{
+  "hospital_id": "HOSP-100001",
+  "hospital_name": "Apollo Hospitals Hyderabad",
+  "total_beds": 750,
+  "icu_beds": 120,
+  "occupied_beds": 642,
+  "doctors": 285,
+  "nurses": 640,
+  "ventilators": 95,
+  "occupancy_rate": 85.6,
+  "departments": [
+    "Cardiology",
+    "Neurology",
+    "Oncology",
+    "Orthopedics",
+    "Emergency Medicine",
+    "Radiology",
+    "ICU",
+    "Pediatrics",
+    "Nephrology",
+    "General Surgery"
+  ],
+  "metadata": {
+    "request_id": "REQ-HOSP-100001",
+    "user_id": "hospital_admin",
+    "organization": "Apollo Hospitals",
+    "timestamp": "2026-07-05T10:00:00Z"
+  }
+}
+Sample Request 2 – Teaching Hospital
+{
+  "hospital_id": "HOSP-100002",
+  "hospital_name": "AIIMS New Delhi",
+  "total_beds": 2500,
+  "icu_beds": 320,
+  "occupied_beds": 2310,
+  "doctors": 1250,
+  "nurses": 2450,
+  "ventilators": 285,
+  "occupancy_rate": 92.4,
+  "departments": [
+    "Cardiology",
+    "Neurology",
+    "Neurosurgery",
+    "Emergency",
+    "Trauma",
+    "Oncology",
+    "Nephrology",
+    "Pulmonology",
+    "General Medicine",
+    "Transplant Unit"
+  ],
+  "metadata": {
+    "request_id": "REQ-HOSP-100002",
+    "user_id": "operations_manager",
+    "organization": "AIIMS",
+    "timestamp": "2026-07-05T11:15:00Z"
+  }
+}
+Sample Request 3 – Cardiac Specialty Hospital
+{
+  "hospital_id": "HOSP-100003",
+  "hospital_name": "Narayana Health Bengaluru",
+  "total_beds": 950,
+  "icu_beds": 180,
+  "occupied_beds": 815,
+  "doctors": 420,
+  "nurses": 980,
+  "ventilators": 145,
+  "occupancy_rate": 85.8,
+  "departments": [
+    "Cardiology",
+    "Cardiac Surgery",
+    "ICU",
+    "Emergency",
+    "Radiology",
+    "Cath Lab",
+    "Cardiac Rehabilitation"
+  ],
+  "metadata": {
+    "request_id": "REQ-HOSP-100003",
+    "user_id": "chief_medical_officer",
+    "organization": "Narayana Health",
+    "timestamp": "2026-07-05T12:30:00Z"
+  }
+}
+Sample Request 4 – Emergency Care Scenario
+{
+  "hospital_id": "HOSP-100004",
+  "hospital_name": "City Emergency Medical Center",
+  "total_beds": 500,
+  "icu_beds": 90,
+  "occupied_beds": 485,
+  "doctors": 210,
+  "nurses": 540,
+  "ventilators": 75,
+  "occupancy_rate": 97.0,
+  "departments": [
+    "Emergency",
+    "ICU",
+    "Trauma",
+    "Radiology",
+    "General Surgery",
+    "Orthopedics",
+    "Critical Care"
+  ],
+  "metadata": {
+    "request_id": "REQ-HOSP-100004",
+    "user_id": "emergency_admin",
+    "organization": "City Health System",
+    "timestamp": "2026-07-05T14:00:00Z"
+  }
+}
+Sample Request 5 – Children's Hospital
+{
+  "hospital_id": "HOSP-100005",
+  "hospital_name": "Rainbow Children's Hospital",
+  "total_beds": 420,
+  "icu_beds": 60,
+  "occupied_beds": 356,
+  "doctors": 165,
+  "nurses": 390,
+  "ventilators": 42,
+  "occupancy_rate": 84.8,
+  "departments": [
+    "Pediatrics",
+    "Pediatric ICU",
+    "Neonatal ICU",
+    "Emergency",
+    "Pediatric Surgery",
+    "Radiology",
+    "Pediatric Cardiology"
+  ],
+  "metadata": {
+    "request_id": "REQ-HOSP-100005",
+    "user_id": "hospital_director",
+    "organization": "Rainbow Hospitals",
+    "timestamp": "2026-07-05T15:30:00Z"
+  }
+}

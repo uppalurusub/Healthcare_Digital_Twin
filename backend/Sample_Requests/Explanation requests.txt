@@ -1,0 +1,110 @@
+Sample Request 1 – Patient Readmission Prediction Explanation
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "prediction_id": "PRED-20260705-0001"
+}
+Sample Request 2 – Mortality Risk Explanation
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100245",
+  "prediction_id": "PRED-20260705-0002"
+}
+Sample Request 3 – Disease Progression Explanation
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100356",
+  "prediction_id": "PRED-20260705-0003"
+}
+Sample Request 4 – Clinical Trial Enrollment Prediction Explanation
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100001",
+  "prediction_id": "PRED-TRIAL-100001"
+}
+Sample Request 5 – Clinical Trial Dropout Prediction Explanation
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100004",
+  "prediction_id": "PRED-TRIAL-100002"
+}
+Sample Request 6 – Clinical Trial Completion Prediction Explanation
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100005",
+  "prediction_id": "PRED-TRIAL-100003"
+}
+Sample Request 7 – Hospital Bed Occupancy Prediction Explanation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "prediction_id": "PRED-HOSP-100001"
+}
+Sample Request 8 – ICU Demand Prediction Explanation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100002",
+  "prediction_id": "PRED-HOSP-100002"
+}
+Sample Request 9 – Resource Utilization Prediction Explanation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100003",
+  "prediction_id": "PRED-HOSP-100003"
+}
+Sample Request 10 – Hospital Revenue Prediction Explanation
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100004",
+  "prediction_id": "PRED-HOSP-100004"
+}
+Typical Explainability Response
+
+For a request like:
+
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "prediction_id": "PRED-20260705-0001"
+}
+
+your Digital Twin platform might return a response such as:
+
+{
+  "prediction_id": "PRED-20260705-0001",
+  "prediction_type": "Hospital Readmission",
+  "predicted_value": "High Risk",
+  "confidence": 0.94,
+  "explanation": {
+    "top_contributing_factors": [
+      {
+        "feature": "Previous Admissions",
+        "importance": 0.32
+      },
+      {
+        "feature": "Heart Failure",
+        "importance": 0.24
+      },
+      {
+        "feature": "Length of Stay",
+        "importance": 0.18
+      },
+      {
+        "feature": "Medication Adherence",
+        "importance": 0.14
+      },
+      {
+        "feature": "Age",
+        "importance": 0.12
+      }
+    ],
+    "reasoning": "The prediction is primarily driven by the patient's history of multiple admissions, diagnosis of heart failure, and prolonged hospital stay. Medication adherence partially mitigates the overall risk.",
+    "recommendations": [
+      "Schedule follow-up within 7 days of discharge.",
+      "Enroll the patient in a chronic disease management program.",
+      "Monitor medication adherence using remote patient monitoring.",
+      "Review treatment plan with the cardiology team."
+    ]
+  },
+  "generated_at": "2026-07-05T12:30:00Z"
+}

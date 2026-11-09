@@ -1,0 +1,148 @@
+Sample Request 1 – Phase III Diabetes Trial
+{
+  "trial_id": "TRIAL-100001",
+  "protocol_id": "PROT-DM-2026-001",
+  "sponsor": "Pfizer",
+  "phase": "Phase III",
+  "indication": "Type 2 Diabetes Mellitus",
+  "enrollment_target": 1200,
+  "enrolled_subjects": 845,
+  "dropout_rate": 6.8,
+  "sites": [
+    "Hyderabad Clinical Research Center",
+    "Apollo Hospitals Chennai",
+    "AIIMS Delhi",
+    "Manipal Hospital Bengaluru"
+  ],
+  "countries": [
+    "India",
+    "United States",
+    "United Kingdom",
+    "Germany"
+  ],
+  "metadata": {
+    "request_id": "REQ-TRIAL-100001",
+    "user_id": "clinical_manager_01",
+    "organization": "Pfizer",
+    "timestamp": "2026-07-05T09:30:00Z"
+  }
+}
+Sample Request 2 – Oncology Trial
+{
+  "trial_id": "TRIAL-100002",
+  "protocol_id": "ONC-PROT-2026-101",
+  "sponsor": "Novartis",
+  "phase": "Phase II",
+  "indication": "Metastatic Breast Cancer",
+  "enrollment_target": 450,
+  "enrolled_subjects": 312,
+  "dropout_rate": 8.5,
+  "sites": [
+    "Memorial Sloan Kettering",
+    "Mayo Clinic",
+    "MD Anderson Cancer Center",
+    "Apollo Cancer Centre"
+  ],
+  "countries": [
+    "USA",
+    "India",
+    "Canada",
+    "Australia"
+  ],
+  "metadata": {
+    "request_id": "REQ-TRIAL-100002",
+    "user_id": "trial_director",
+    "organization": "Novartis",
+    "timestamp": "2026-07-05T10:00:00Z"
+  }
+}
+Sample Request 3 – Vaccine Trial
+{
+  "trial_id": "TRIAL-100003",
+  "protocol_id": "VAC-PROT-3001",
+  "sponsor": "Moderna",
+  "phase": "Phase IV",
+  "indication": "Seasonal Influenza Vaccine",
+  "enrollment_target": 5000,
+  "enrolled_subjects": 4820,
+  "dropout_rate": 2.3,
+  "sites": [
+    "Johns Hopkins Hospital",
+    "Stanford Health",
+    "Apollo Hospitals Hyderabad",
+    "Narayana Health Bengaluru",
+    "CMC Vellore"
+  ],
+  "countries": [
+    "USA",
+    "India",
+    "Brazil",
+    "Japan",
+    "Singapore"
+  ],
+  "metadata": {
+    "request_id": "REQ-TRIAL-100003",
+    "user_id": "study_lead",
+    "organization": "Moderna",
+    "timestamp": "2026-07-05T11:15:00Z"
+  }
+}
+Sample Request 4 – Cardiovascular Trial
+{
+  "trial_id": "TRIAL-100004",
+  "protocol_id": "CARDIO-HTN-2026",
+  "sponsor": "AstraZeneca",
+  "phase": "Phase III",
+  "indication": "Hypertension",
+  "enrollment_target": 1800,
+  "enrolled_subjects": 1342,
+  "dropout_rate": 5.7,
+  "sites": [
+    "Cleveland Clinic",
+    "Mayo Clinic",
+    "Apollo Hospitals",
+    "Fortis Healthcare",
+    "Max Super Specialty Hospital"
+  ],
+  "countries": [
+    "USA",
+    "India",
+    "Canada",
+    "Germany",
+    "France"
+  ],
+  "metadata": {
+    "request_id": "REQ-TRIAL-100004",
+    "user_id": "principal_investigator",
+    "organization": "AstraZeneca",
+    "timestamp": "2026-07-05T12:00:00Z"
+  }
+}
+Sample Request 5 – Neurology Trial
+{
+  "trial_id": "TRIAL-100005",
+  "protocol_id": "NEURO-ALZ-5001",
+  "sponsor": "Biogen",
+  "phase": "Phase II",
+  "indication": "Alzheimer's Disease",
+  "enrollment_target": 650,
+  "enrolled_subjects": 428,
+  "dropout_rate": 11.4,
+  "sites": [
+    "Massachusetts General Hospital",
+    "Apollo Hospitals Bengaluru",
+    "NIMHANS",
+    "AIIMS Delhi"
+  ],
+  "countries": [
+    "USA",
+    "India",
+    "United Kingdom"
+  ],
+  "metadata": {
+    "request_id": "REQ-TRIAL-100005",
+    "user_id": "study_coordinator",
+    "organization": "Biogen",
+    "timestamp": "2026-07-05T13:30:00Z"
+  }
+}

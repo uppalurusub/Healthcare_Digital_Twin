@@ -1,0 +1,149 @@
+Sample Request 1 – Patient Readmission Prediction
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100001",
+  "prediction_type": "hospital_readmission",
+  "features": {
+    "age": 68,
+    "gender": "Male",
+    "diagnosis": "Heart Failure",
+    "length_of_stay": 8,
+    "previous_admissions": 3,
+    "charlson_comorbidity_index": 5,
+    "blood_pressure": "150/95",
+    "heart_rate": 88,
+    "medication_adherence": 82,
+    "discharge_status": "Home"
+  }
+}
+Sample Request 2 – Mortality Risk Prediction
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100245",
+  "prediction_type": "mortality_risk",
+  "features": {
+    "age": 76,
+    "gender": "Female",
+    "diagnosis": "Sepsis",
+    "spo2": 91,
+    "heart_rate": 112,
+    "respiratory_rate": 26,
+    "temperature": 38.8,
+    "systolic_bp": 92,
+    "glasgow_coma_scale": 13
+  }
+}
+Sample Request 3 – Disease Progression Prediction
+{
+  "twin_type": "patient",
+  "entity_id": "PAT-100356",
+  "prediction_type": "disease_progression",
+  "features": {
+    "disease": "Type 2 Diabetes",
+    "current_hba1c": 8.4,
+    "bmi": 31.8,
+    "fasting_glucose": 165,
+    "exercise_minutes": 25,
+    "diet_compliance": 70,
+    "medication_adherence": 90
+  }
+}
+Sample Request 4 – Clinical Trial Enrollment Success
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100001",
+  "prediction_type": "enrollment_success",
+  "features": {
+    "phase": "Phase III",
+    "target_enrollment": 1200,
+    "current_enrollment": 845,
+    "active_sites": 32,
+    "countries": [
+      "India",
+      "USA",
+      "Germany"
+    ],
+    "dropout_rate": 6.5,
+    "monthly_enrollment_rate": 58
+  }
+}
+Sample Request 5 – Clinical Trial Dropout Prediction
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100002",
+  "prediction_type": "dropout_probability",
+  "features": {
+    "phase": "Phase II",
+    "participants": 420,
+    "protocol_deviations": 15,
+    "average_visit_compliance": 87,
+    "adverse_events": 22,
+    "study_duration_months": 18
+  }
+}
+Sample Request 6 – Trial Timeline Prediction
+{
+  "twin_type": "trial",
+  "entity_id": "TRIAL-100004",
+  "prediction_type": "trial_completion",
+  "features": {
+    "current_completion_percent": 72,
+    "remaining_subjects": 130,
+    "screen_failure_rate": 14,
+    "site_activation_delay_days": 12,
+    "current_sites": 28
+  }
+}
+Sample Request 7 – Hospital Bed Occupancy Prediction
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100001",
+  "prediction_type": "bed_occupancy",
+  "features": {
+    "total_beds": 750,
+    "occupied_beds": 642,
+    "average_daily_admissions": 82,
+    "average_daily_discharges": 74,
+    "season": "Monsoon",
+    "holiday_period": false
+  }
+}
+Sample Request 8 – ICU Demand Prediction
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100002",
+  "prediction_type": "icu_demand",
+  "features": {
+    "icu_beds": 320,
+    "occupied_icu_beds": 284,
+    "critical_patient_rate": 17,
+    "emergency_cases_per_day": 145,
+    "ventilators_available": 285
+  }
+}
+Sample Request 9 – Resource Utilization Prediction
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100003",
+  "prediction_type": "resource_utilization",
+  "features": {
+    "doctors": 420,
+    "nurses": 980,
+    "operation_theatres": 18,
+    "average_patient_volume": 4100,
+    "bed_occupancy": 87.5
+  }
+}
+Sample Request 10 – Hospital Revenue Prediction
+{
+  "twin_type": "hospital",
+  "entity_id": "HOSP-100004",
+  "prediction_type": "hospital_revenue",
+  "features": {
+    "monthly_patient_volume": 5200,
+    "average_bill_amount": 38500,
+    "insurance_claim_ratio": 84,
+    "occupancy_rate": 91,
+    "operating_cost": 9800000
+  }
+}

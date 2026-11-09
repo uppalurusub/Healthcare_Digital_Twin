@@ -1,0 +1,79 @@
+{
+  "patient_id": "PAT-100001",
+  "age": 58,
+  "gender": "Male",
+  "height_cm": 172.5,
+  "weight_kg": 82.3,
+  "bmi": 27.7,
+  "blood_pressure": "145/92",
+  "heart_rate": 84,
+  "respiratory_rate": 18,
+  "spo2": 97,
+  "temperature": 36.8,
+  "diagnoses": [
+    "Hypertension",
+    "Type 2 Diabetes Mellitus",
+    "Hyperlipidemia"
+  ],
+  "medications": [
+    "Metformin 500 mg twice daily",
+    "Amlodipine 5 mg once daily",
+    "Atorvastatin 20 mg once daily",
+    "Aspirin 81 mg once daily"
+  ],
+  "allergies": [
+    "Penicillin",
+    "Peanuts"
+  ],
+  "laboratory_results": {
+    "HbA1c": 7.4,
+    "Fasting Blood Glucose": 148,
+    "Total Cholesterol": 210,
+    "LDL": 132,
+    "HDL": 42,
+    "Triglycerides": 185,
+    "Creatinine": 1.0,
+    "eGFR": 88,
+    "Hemoglobin": 14.1,
+    "WBC": 7200,
+    "Platelets": 250000
+  },
+  "smoking_status": "Former Smoker",
+  "alcohol_use": "Occasional",
+  "medical_history": {
+    "chronic_conditions": [
+      "Hypertension",
+      "Type 2 Diabetes",
+      "Hyperlipidemia"
+    ],
+    "surgeries": [
+      "Appendectomy (2012)"
+    ],
+    "family_history": {
+      "father": [
+        "Coronary Artery Disease"
+      ],
+      "mother": [
+        "Type 2 Diabetes"
+      ]
+    },
+    "previous_hospitalizations": [
+      {
+        "admission_date": "2025-03-10",
+        "discharge_date": "2025-03-15",
+        "reason": "Uncontrolled Hypertension"
+      }
+    ],
+    "vaccinations": [
+      "COVID-19",
+      "Influenza",
+      "Hepatitis B"
+    ]
+  },
+  "metadata": {
+    "request_id": "REQ-20260704-0001",
+    "user_id": "doctor_001",
+    "organization": "Apollo Hospitals",
+    "timestamp": "2026-07-04T14:30:00Z"
+  }
+}
